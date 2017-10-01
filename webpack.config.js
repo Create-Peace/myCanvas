@@ -38,10 +38,10 @@ module.exports = {
             template:  './src/examples/ParticleAnimator.html'
         }),
         new webpack.HotModuleReplacementPlugin(),
-        new UglifyJSPlugin()
+        // new UglifyJSPlugin()
     ],
     devServer: {
-        contentBase: path.join(__dirname, "./"),
+        contentBase: path.join(__dirname, "./src/examples/"),
         hot: true,
         compress: true,
         hot: true,
