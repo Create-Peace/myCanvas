@@ -6,10 +6,10 @@ const webpack = require('webpack')
 const htmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
-
+// /Users/apple/Desktop/myCanvas/cavas/src/examples/circleLoading.js
 module.exports = {
     entry: {
-       index:  './src/examples/index.js'
+       index:  './src/examples/circleLoading.js'
     },
     output: {
         filename: '[name].[hash:5].js',
@@ -42,6 +42,7 @@ module.exports = {
     ],
     devServer: {
         contentBase: path.join(__dirname, "./src/examples/"),
+        index: 'ParticleAnimator.html',
         hot: true,
         compress: true,
         hot: true,
