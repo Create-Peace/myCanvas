@@ -85,7 +85,7 @@ let Draw = function () {
     this.canvas = canvas
     this.ctx = this.canvas.getContext('2d')
 
-    console.log(this.ctx)
+    // console.log(this.ctx)
 
     this.w = w
 
@@ -97,17 +97,17 @@ let Draw = function () {
     this.init(60)
 }
 Draw.prototype.connectLine = function () {
-    console.log(this.ctx, this.w, this.h)
+    // console.log(this.ctx, this.w, this.h)
     let w = this.w
     let h = this.h
     this.ctx.clearRect(0, 0, w, h)
-    console.log(this.circles.length)
+    // console.log(this.circles.length)
     for (let i = 0; i < this.circles.length; i++) {
         this.circles[i].move(w, h)
         this.circles[i].drawCircle(this.ctx)
 
         for (let j = i + 1; j < this.circles.length; j++) {
-            console.log(this.circles[i])
+            // console.log(this.circles[i])
             this.circles[i].drawLine(this.ctx, this.circles[j])
         }
     }
@@ -124,7 +124,7 @@ Draw.prototype.init = function (num) {
     for (var i = 0; i < num; i++) {
         this.circles.push(new Circle(Math.random() * this.w, Math.random() * this.h))
     }
-    console.log(this.circles.length)
+    // console.log(this.circles.length)
     this.connectLine()
 }
 
