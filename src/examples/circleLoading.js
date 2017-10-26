@@ -124,11 +124,9 @@ window.cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAni
                         
                 if(this.n >= 50){
                     this.n = this.n + .01
-                    this.stopAnimate()
-                } else if (this.n >= 90) {
-                    this.n = this.n + .01
-                }
-                else {
+                    this.stopAnimate() // 停止动画
+                    return
+                } else {
                     this.n= this.n+0.5        
                 }
             } else {
